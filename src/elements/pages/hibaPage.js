@@ -1,32 +1,12 @@
+import HelpForm from "../components/helpForm";
+
 const HibaPage = () => {
     return (
-        <section className="mainAboutPage">
+        <section className="helpPage">
             <div>
-                <h1>A Petrik DÖK</h1>
-            </div>
-            <div className="mainAboutList">
-                <div className="mainAboutItem">
-                    <h2>Mi a feladatunk?</h2>
-                    <div>
-                        A diák önkormányzatnak feladata
-                        <ul className="dokJobList">
-                            <li>Diákok érdekképviselete és érdekvédelme</li>
-                            <li>Diákok problémáira megoldást keresni</li>
-                            <li>Iskola közöség építő programok szervezése</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="mainAboutItem">
-                    <h2>Segitség kell?</h2>
-                    <p></p>
-                </div>
-                <div className="mainAboutItem">
-                    <h2>Következő gyülés</h2>
-                    <p></p>
-                </div>
-                <div className="mainAboutItem">
-                    <h2>Szeretnél csatlakozni?</h2>
-                    <p></p>
+                <h1>Segitség kell?</h1>
+                <div className="helpBejelentés">
+                    <HelpForm />
                 </div>
             </div>
         </section>
