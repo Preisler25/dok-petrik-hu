@@ -6,7 +6,7 @@ import './App.css';
 import DefPage from './elements/pages/templatePage';
 import MainPage from './elements/pages/mainPage';
 import HibaPage from './elements/pages/hibaPage';
-import ProjectsPage from './elements/pages/projectsPage';
+import ProjectPage from './elements/pages/projectPage';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "projects",
-        element: <ProjectsPage />,
+        element: <ProjectPage />,
       }
     ],
   },

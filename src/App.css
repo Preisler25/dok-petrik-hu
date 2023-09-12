@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
 html {
     text-align: center;
     /* overflow-x:none; #d5f5ef*/
@@ -10,6 +17,13 @@ html {
     display: flex;
     margin: 0;
     padding: 0;
+}
+
+/* nav bar */
+
+nav {
+    margin-top: 2vh;
+    margin-bottom: 10vh;
 }
 
 .navBarList {
@@ -28,4 +42,12 @@ html {
     font-size: 2rem;
     list-style: none;
     transition: all 0.2s ease-in;
+    padding-top: 2vh;
 }
+
+.navBarItem:hover {
+    cursor: pointer;
+    padding-top: 0vh;
+}
+
+/* main for mainPage*/

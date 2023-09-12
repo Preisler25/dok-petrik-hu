@@ -22,7 +22,7 @@ const Navbar = () => {
                 <NavLink to="/projects" activeClassName="activeNavBarItem">Projektek</NavLink>
             </li>
             <li className="navBarItem">
-                <NavLink to="/" activeClassName="activeNavBarItem">Dök</NavLink>
+                <NavLink to="/" activeClassName="activeNavBarItem">Dök-röl</NavLink>
             </li>
             <li className="navBarItem">
                 <NavLink to="/needHelp" activeClassName="activeNavBarItem">Segítség</NavLink>
