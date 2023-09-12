@@ -7,6 +7,7 @@ const NavLink = styled(BaseNavLink)`
     align-items: center;
     color: #00000090;
     text-decoration: none;
+    padding-bottom: 2vh;
 
 
 

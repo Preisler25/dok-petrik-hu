@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +16,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll, fixed;
-    width: 100%;
+    width: 100vw;
     min-height: 100%;
     display: flex;
     margin: 0;
@@ -22,7 +26,7 @@ html {
 /* nav bar */
 
 nav {
-    margin-top: 2vh;
+    margin-top: 7vh;
     margin-bottom: 10vh;
 }
 
@@ -51,7 +55,66 @@ nav {
 }
 
 /* main for mainPage*/
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 3vh;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 3vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4vh;
+}
 
 .mainAboutPage {
-    background-color: rgba(240, 248, 255, 0.39);
+    width: 80vw;
+    padding: 4vh;
+    background-color: #f3fffd63;
+    border-radius: 3vh;
+}
+
+.mainAboutList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.mainAboutItem {
+    padding-top: 2vh;
+    margin-bottom: 5vh;
+    width: 30rem;
+    height: 20rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.dokJobListTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+
+.dokJobList {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 20%;
+    width: 100%;
+    height: 100%;
+}
+
+
+.dokJobList>li {
+    font-family: 'Roboto', sans-serif;
+    list-style: disc;
 }
