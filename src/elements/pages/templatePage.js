@@ -1,5 +1,6 @@
 import { Outlet } from "react-router"
 import Navbar from "../components/navbar"
+import Footer from "../components/footer"
 
 const DefPage = () => {
     return (
@@ -11,7 +12,7 @@ const DefPage = () => {
                 <Outlet />
             </main>
             <footer>
-                <p>Footer</p>
+                <Footer />
             </footer>
         </div>
     )
