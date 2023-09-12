@@ -3,9 +3,10 @@ import { createBrowserRouter } from 'react-router-dom';
 
 
 import './App.css';
+import DefPage from './elements/pages/templatePage';
 import MainPage from './elements/pages/mainPage';
 import HibaPage from './elements/pages/hibaPage';
-import DefPage from './elements/pages/templatePage';
+import ProjectsPage from './elements/pages/projectsPage';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "projects",
-        element: <div>Projects</div>,
+        element: <ProjectsPage />,
       }
     ],
   },
