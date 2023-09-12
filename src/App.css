@@ -51,3 +51,7 @@ nav {
 }
 
 /* main for mainPage*/
+
+.mainAboutPage {
+    background-color: rgba(240, 248, 255, 0.39);
+}

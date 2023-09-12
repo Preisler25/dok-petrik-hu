@@ -1,6 +1,6 @@
 const MainPage = () => {
     return (
-        <section>
+        <section className="mainAboutPage">
             <div>
                 <h1>A Petrik DÖK</h1>
             </div>
