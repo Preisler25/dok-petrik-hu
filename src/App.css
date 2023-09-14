@@ -89,7 +89,8 @@ main {
 }
 
 .mainAboutPage,
-.helpPage {
+.helpPage,
+.projectPage {
     width: 80vw;
     padding: 4vh;
     background-color: #f3fffd63;

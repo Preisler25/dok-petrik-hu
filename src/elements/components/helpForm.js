@@ -11,6 +11,7 @@ const HelpForm = () => {
         setName(e.target.value);
     }
 
+
     //TODO: class
     const [cls, setCls] = useState('');
     const handleClassChange = (e) => {
@@ -38,27 +39,53 @@ const HelpForm = () => {
         setMessage(e.target.value);
     }
 
+    const resetValues = () => {
+        setName('');
+        setCls('');
+        setSocials('');
+        setMessage('');
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        let url = `http://localhost:2506/new_prob?name=${name}&class=${cls}&socials=${socials}&message=${message}`;
+        console.log(url);
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.success) {
+                    alert('Sikeresen elküldve!');
+                    resetValues();
+                } else {
+                    alert('Hiba történt!');
+                }
+            })
+            .catch(err => {
+                console.log(err);
+                alert('Hiba történt!');
+            });
+    }
+
     return (
         <div className="help-form" >
-            <form method="Get" action="/alma">
-                <div className="form-group">
-                    <label htmlFor="name">Név</label>
-                    <input type="text" name="name" id="name" value={name} onChange={handleNameChange} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="class">Osztály</label>
-                    <input type="text" name="class" id="class" value={cls} onChange={handleClassChange} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="socials">Insta/facebook profil linked</label>
-                    <input type="text" name="socials" id="socials" value={socials} onChange={handleSocialsChange} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="message">Üzenet</label>
-                    <textarea name="message" id="message" cols="30" rows="10" value={message} onChange={handleMessageChange}></textarea>
-                </div>
-                <button type="submit">Küldés</button>
-            </form>
+            <div className="form-group">
+                <label htmlFor="name">Név</label>
+                <input type="text" name="name" id="name" value={name} onChange={handleNameChange} />
+            </div>
+            <div className="form-group">
+                <label htmlFor="class">Osztály</label>
+                <input type="text" name="class" id="class" value={cls} onChange={handleClassChange} />
+            </div>
+            <div className="form-group">
+                <label htmlFor="socials">Insta/facebook profil linked</label>
+                <input type="text" name="socials" id="socials" value={socials} onChange={handleSocialsChange} />
+            </div>
+            <div className="form-group">
+                <label htmlFor="message">Üzenet</label>
+                <textarea name="message" id="message" cols="30" rows="10" value={message} onChange={handleMessageChange}></textarea>
+            </div>
+            <button type="submit" onClick={handleSubmit}>Küldés</button>
         </div >
     );
 };
