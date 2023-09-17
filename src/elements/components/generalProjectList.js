@@ -3,7 +3,7 @@ import axios from "axios";
 import GeneralProject from "./generalProject";
 
 const GeneralProjectList = () => {
-    const [list, setList] = useState([]);
+    const [list, setList] = useState([1,2]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
@@ -37,7 +37,7 @@ const GeneralProjectList = () => {
     else {
         return (
             <div>
-            {data.projects.map((project) => (
+            {list.projects.map((project) => (
                 <GeneralProject key={project} project_id={project}/>
             ))}
             </div>

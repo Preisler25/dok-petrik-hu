@@ -24,6 +24,9 @@ html {
 }
 
 /* nav bar */
+/* nav bar */
+/* nav bar */
+/* nav bar */
 
 nav {
     margin-top: 7vh;
@@ -67,6 +70,9 @@ nav ul li a.active {
     padding-top: 0vh;
 }
 
+/* main for mainPage*/
+/* main for mainPage*/
+/* main for mainPage*/
 /* main for mainPage*/
 h1 {
     font-family: 'Roboto', sans-serif;
@@ -132,4 +138,47 @@ main {
 .dokJobList>li {
     font-family: 'Roboto', sans-serif;
     list-style: disc;
+}
+
+/* help page */
+/* help page */
+/* help page */
+/* help page */
+.help-form{
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem;
+}
+.form-group label{
+    margin-right: 0.5rem;
+    margin-left: auto;
+}
+
+
+
+.form-group input,
+.form-group .text{
+    padding: 0.5rem;
+    margin: 0.2rem;
+    border-radius: 0.6rem;
+    width: 60%;
+}
+.sub-button{
+    height: 3rem;
+    width: 12rem;
+    align-self: center;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    border-radius: 0.6rem;
+    background-color: white;
+}
+.sub-button:hover{
+    background-color: rgb(224, 224, 224);
 }
