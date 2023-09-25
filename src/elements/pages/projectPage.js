@@ -6,6 +6,9 @@ const ProjectPage = () => {
             <div>
                 <h1>Aktív Projektjeink</h1>
             </div>
+            <div className="projectList">
+                <GeneralProjectList />
+            </div>
         </section>
     );
 };

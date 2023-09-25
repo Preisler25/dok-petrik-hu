@@ -3,7 +3,7 @@ import axios from "axios";
 import GeneralProject from "./generalProject";
 
 const GeneralProjectList = () => {
-    const [list, setList] = useState([1,2]);
+    const [list, setList] = useState([1, 2]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
@@ -14,16 +14,25 @@ const GeneralProjectList = () => {
         setError(null);
         setList([]);
 
-        axios
-        .get("https://api.example.com/projects")
-        .then((response) => {
-            setLoading(false);
-            setList(response.data.projects);
+        const api = axios.create({
+            baseURL: 'http://localhost:3002',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET'
+            }
         })
-        .catch((error) => {
-            setLoading(false);
-            setError(error);
-        });
+
+        api
+            .get("/get_projects")
+            .then((response) => {
+                console.log(response.data);
+                setLoading(false);
+                setList(response.data.projects);
+            })
+            .catch((error) => {
+                setLoading(false);
+                setError(error);
+            });
 
         return () => abortController.abort();
     }, []);
@@ -37,9 +46,9 @@ const GeneralProjectList = () => {
     else {
         return (
             <div>
-            {list.projects.map((project) => (
-                <GeneralProject key={project} project_id={project}/>
-            ))}
+                {/*list.projects.map((project) => (
+                    <GeneralProject key={project} project_id={project} />
+                ))*/}
             </div>
         );
     }
