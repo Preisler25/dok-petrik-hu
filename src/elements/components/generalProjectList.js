@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import GeneralProject from "./generalProject";
+import api from "../../util/api";
 
 const GeneralProjectList = () => {
     const [list, setList] = useState([1, 2]);
@@ -13,14 +13,6 @@ const GeneralProjectList = () => {
         setLoading(true);
         setError(null);
         setList([]);
-
-        const api = axios.create({
-            baseURL: 'http://localhost:3002',
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET'
-            }
-        })
 
         api
             .get("/get_projects")
