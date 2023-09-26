@@ -13,6 +13,11 @@ const GeneralProject = (data) => {
 
     const abortController = new AbortController();
 
+    const convertDate = (date_raw) => {
+        let date = new Date(date_raw);
+        let formattedDate = `${date.getFullYear()}/${(date.getMonth() + 1)}/${date.getDate()}`;
+        return formattedDate;
+    }
 
     useEffect(() => {
         if (data.data != undefined) {
@@ -37,9 +42,10 @@ const GeneralProject = (data) => {
     }
     else {
         return (
-            <div>
-                <h1>General Project</h1>
-                <h2>{project.name}</h2>
+            <div className="general_p_cont">
+                <div className="general_p_name">{project.name}</div>
+                <div className="general_p_date">{convertDate(project.created_at)}</div>
+                <div className="general_p_disc">{project.description}</div>
             </div>
         )
     }
