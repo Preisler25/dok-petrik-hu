@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import api from '../../util/api';
 
 const HelpForm = () => {
 
@@ -48,22 +49,19 @@ const HelpForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let url = `http://localhost:2506/new_prob?name=${name}&class=${cls}&socials=${socials}&message=${message}`;
-        console.log(url);
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.success) {
-                    alert('Sikeresen elküldve!');
-                    resetValues();
-                } else {
-                    alert('Hiba történt!');
-                }
+        console.log(name, cls, socials, message);
+        api.post('/set_new_tipp', {
+            name: name,
+            cls: cls,
+            prof_link: socials,
+            msg: message
+        })
+            .then((response) => {
+                console.log(response);
+                resetValues();
             })
-            .catch(err => {
-                console.log(err);
-                alert('Hiba történt!');
+            .catch((error) => {
+                console.log(error);
             });
     }
 

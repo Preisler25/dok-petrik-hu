@@ -17,9 +17,8 @@ const GeneralProjectList = () => {
         api
             .get("/get_projects")
             .then((response) => {
-                console.log(response.data);
                 setLoading(false);
-                setList(response.data.projects);
+                setList(response.data);
             })
             .catch((error) => {
                 setLoading(false);
@@ -38,9 +37,9 @@ const GeneralProjectList = () => {
     else {
         return (
             <div>
-                {/*list.projects.map((project) => (
-                    <GeneralProject key={project} project_id={project} />
-                ))*/}
+                {list.map((data, index) => (
+                    <GeneralProject key={index} data={data.id} />
+                ))}
             </div>
         );
     }
