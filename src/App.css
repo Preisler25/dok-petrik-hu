@@ -187,6 +187,11 @@ main {
     background-color: rgb(224, 224, 224);
 }
 
+.pp_a_t {
+    margin-bottom: 3vh;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.175);
+}
+
 .general_p_cont {
     display: flex;
     flex-direction: column;
@@ -203,8 +208,15 @@ main {
 }
 
 .general_p_date {
+    margin-top: -4vh;
     font-family: 'Roboto', sans-serif;
     display: flex;
     width: 100%;
     justify-content: end;
+}
+
+.general_p_disc {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 2vh;
+    width: 100%;
 }
