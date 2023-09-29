@@ -32,7 +32,7 @@ const GeneralProjectList = () => {
         return <div>Loading...</div>;
     }
     else if (error) {
-        return <div>Error: {error.message}</div>;
+        return <div>Errorr: {error.message}</div>;
     }
     else {
         return (
