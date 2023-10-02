@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import GyulesComp from "../components/gyulesComp";
 
 const MainPage = () => {
@@ -22,7 +23,9 @@ const MainPage = () => {
                 </div>
                 <div className="mainAboutItem">
                     <h2>Segitség kell?</h2>
-                    <p></p>
+                    <p>
+                        Kattints <NavLink to="/needHelp">ide</NavLink> és írd és vedd fel velünk a kapcsolatot!
+                    </p>
                 </div>
                 <div className="mainAboutItem">
                     <h2>Következő gyülés</h2>
