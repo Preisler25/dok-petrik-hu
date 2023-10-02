@@ -40,6 +40,9 @@ const GeneralProject = (data) => {
     else if (error) {
         return <div>Error: {error.message}</div>;
     }
+    else if (project.length === 0) {
+        return <div>Nincs regisztrált adat</div>;
+    }
     else {
         return (
             <div className="general_p_cont">

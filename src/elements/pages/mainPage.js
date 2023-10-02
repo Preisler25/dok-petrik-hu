@@ -1,3 +1,5 @@
+import GyulesComp from "../components/gyulesComp";
+
 const MainPage = () => {
     return (
         <section className="mainAboutPage">
@@ -24,7 +26,7 @@ const MainPage = () => {
                 </div>
                 <div className="mainAboutItem">
                     <h2>Következő gyülés</h2>
-                    <p></p>
+                    <GyulesComp />
                 </div>
                 <div className="mainAboutItem">
                     <h2>Szeretnél csatlakozni?</h2>

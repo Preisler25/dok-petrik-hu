@@ -34,6 +34,9 @@ const GeneralProjectList = () => {
     else if (error) {
         return <div>Error: {error.message}</div>;
     }
+    else if (list.length === 0) {
+        return <div>Nincs jelenleg aktív projekt</div>;
+    }
     else {
         return (
             <div>
