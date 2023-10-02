@@ -8,6 +8,12 @@ const GyulesComp = () => {
 
     const abortController = new AbortController();
 
+    const convertDate = (date_raw) => {
+        let date = new Date(date_raw);
+        let formattedDate = `${date.getFullYear()}/${(date.getMonth() + 1)}/${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
+        return formattedDate;
+    }
+
     useEffect(() => {
         api.get("/next_gyules")
             .then((response) => {
@@ -33,8 +39,8 @@ const GyulesComp = () => {
     else {
         return (
             <div className="gyulesComp">
-                <div className="gy_time">Időpont: {gyules.gy_date}</div>
-                <div className="gy_hely">Helyszín: {gyules.gy_hely}</div>
+                <div className="gy_time">Időpont: {convertDate(gyules[0].gy_date)}</div>
+                <div className="gy_hely">Helyszín: {gyules[0].gy_hely}</div>
                 <div className="gy_txt">Miről lesz szó: {gyules[0].l_txt}</div>
             </div>
 
